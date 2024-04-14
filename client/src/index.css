@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mostly-customized-scrollbar {
+    display: block;
+    width: 10em;
+    overflow: auto;
+    height: 2em;
+    padding: 1em;
+    margin: 1em auto;
+    outline: 2px dashed cornflowerblue;
+  }
+  
+  /* Demonstrate a "mostly customized" scrollbar
+   * (won't be visible otherwise if width/height is specified) */
+  .mostly-customized-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa; /* or add it to the track */
+  }
+  .background {
+
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( to bottom right, rgba(19, 92, 117, 0.98), rgb(256, 256, 256,0.5));
+    height: 100vh;
+    width:  100vw;
+    font-family: 'Courier New', Courier, monospace;
+
+}

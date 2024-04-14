@@ -1,0 +1,29 @@
+
+.madimi-one-regular {
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+.background {
+
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( to bottom right, rgba(19, 92, 117, 0.98), rgb(256, 256, 256,0.5));
+    height: 100vh;
+    width:  100vw;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    width: 25vw !important ;
+    background-color: white;
+    border-radius: 5%;
+    align-items: center;
+    justify-content: space-evenly;
+
+}

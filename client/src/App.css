@@ -1,0 +1,11 @@
+.background {
+
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( to bottom right, rgba(19, 92, 117, 0.98), rgb(256, 256, 256,0.5));
+    height: 100vh;
+    width:  100vw;
+    font-family: 'Courier New', Courier, monospace;
+
+}
