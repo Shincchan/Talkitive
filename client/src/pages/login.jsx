@@ -5,6 +5,8 @@ import { useState } from 'react';
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from '../context/userContext';
+import axios from "axios";
+
 const Login = () => {
   const [inputs,setInputs] = useState({
     username:'',
@@ -23,22 +25,23 @@ const Login = () => {
     }
     if(inputsCheck){
         
-            fetch("http://localhost:5000/login",{
+            axios(
+              { url : "http://localhost:8000/login",
                 method : "post",
                 headers :  { "Content-Type":"application/json"},
-                body : JSON.stringify({username,password}), 
-            }).then(res =>
-                res.json()
-              ).then(data =>{
-                  if(data.error){
-                    toast.error(data.error);
+                data : JSON.stringify({username,password}), 
+              }
+          ).then(res =>{
+                  if(res.data.error){
+                    toast.error(res.data.error);
                   }else{
-                    localStorage.setItem("token",data.token);
-                    localStorage.setItem("user",JSON.stringify(data.user));
-                    setUser(data.user);
+                    localStorage.setItem("token",res.data.token);
+                    localStorage.setItem("user",JSON.stringify(res.data.user));
+                    setUser(res.data.user);
                     toast.success('Login');
                     navigate("/");
                   }
+                  console.log(res);
             })
             
         }

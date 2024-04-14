@@ -36,6 +36,7 @@ router.post("/signup",async (req,res)=>{
 });
 
 router.post('/login',async (req,res)=>{
+    console.log("ok");
     const {username,password} = req.body;
 
     try {
@@ -43,7 +44,7 @@ router.post('/login',async (req,res)=>{
             res.status(422).json({error : "please add email or password"});
         }
         const user = await User.findOne({username:username});
-
+        
         if(!user){
             return res.status(404).json({error :"invalid credentials"})
         }else{

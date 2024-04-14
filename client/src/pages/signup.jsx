@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 
 import toast from "react-hot-toast"
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 const Signup = () => {
   const [inputs,setInputs] = useState({
     username:'',
@@ -19,7 +21,7 @@ const Signup = () => {
     if(!inputsCheck){ setloading(false); return;}
     if(inputsCheck){
         
-            fetch("http://localhost:5000/signup",{
+            fetch("http://localhost:8000/signup",{
                 method : "post",
                 headers :  { "Content-Type":"application/json"},
                 body : JSON.stringify({username,password,gender,}), 

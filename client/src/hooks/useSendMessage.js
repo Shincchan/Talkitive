@@ -12,7 +12,7 @@ const useSendMessage = () => {
 
                 axios({
                     // Endpoint to send files
-                    url: `http://localhost:5000/message/send/${receiver._id}`,
+                    url: `http://localhost:8000/message/send/${receiver._id}`,
                     method: "POST",
                     headers:  { 
                         "Content-Type":"application/json",
