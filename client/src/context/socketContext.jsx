@@ -14,7 +14,7 @@ export const SocketContextProvider = ({children})=>{
 
      useEffect(() => {
         if(user){
-            const socket = io("http://localhost:8000",{
+            const socket = io("https://talkitive.onrender.com/",{
                 query :{
                     userId :  user._id,
                 }
