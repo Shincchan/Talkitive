@@ -21,7 +21,7 @@ const Signup = () => {
     if(!inputsCheck){ setloading(false); return;}
     if(inputsCheck){
         
-            fetch("http://localhost:8000/signup",{
+            fetch("/signup",{
                 method : "post",
                 headers :  { "Content-Type":"application/json"},
                 body : JSON.stringify({username,password,gender,}), 

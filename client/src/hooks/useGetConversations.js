@@ -8,7 +8,7 @@ const useGetonversations = () => {
         const getConversations = ()=>{
       try {
        
-        fetch('http://localhost:8000/users',{
+        fetch('/users',{
           method : "GET",
           headers :  { 
             

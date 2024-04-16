@@ -16,7 +16,7 @@ const useGetMessages = () => {
                 setLoading(true);
                 axios({
                     // Endpoint to send files
-                    url: `http://localhost:8000/message/${receiver._id}`,
+                    url: `/message/${receiver._id}`,
                     method: "GET",
                     headers:  { 
                         "Content-Type":"application/json",

@@ -26,7 +26,7 @@ const Login = () => {
     if(inputsCheck){
         
             axios(
-              { url : "http://localhost:8000/login",
+              { url : "/login",
                 method : "post",
                 headers :  { "Content-Type":"application/json"},
                 data : JSON.stringify({username,password}), 
