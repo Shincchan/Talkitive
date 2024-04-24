@@ -9,8 +9,8 @@ import axios from "axios";
 
 const Login = () => {
   const [inputs,setInputs] = useState({
-    username:'',
-    password : '',
+    username:'udit',
+    password : '123456',
   });
   const navigate = useNavigate();
   const [loading, setloading] = useState(false);
